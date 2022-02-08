@@ -4,11 +4,14 @@ h2.textContent = ''
 document.body.append(h2)
 document.body.append (input)
 
+let changeElement
+
 input.addEventListener('change',changeInput)
 changeInput()
 
-function changeInput() {
+ function changeInput() {
+    clearTimeout(changeElement)
     h2.textContent = input.value
-    setTimeout(changeInput,300)
+    changeElement = setTimeout(changeInput,300)
 }
 
