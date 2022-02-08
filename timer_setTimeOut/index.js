@@ -6,12 +6,13 @@ document.body.append (input)
 
 let changeElement
 
-input.addEventListener('change',changeInput)
-changeInput()
+input.addEventListener('input',changeInput)
 
  function changeInput() {
     clearTimeout(changeElement)
-    h2.textContent = input.value
-    changeElement = setTimeout(changeInput,300)
+    changeElement = setTimeout(function (){
+        h2.textContent = input.value
+    },1000)
+
 }
 
