@@ -12,7 +12,7 @@ input.addEventListener('input',changeInput)
     clearTimeout(changeElement)
     changeElement = setTimeout(function (){
         h2.textContent = input.value
-    },1000)
+    },300)
 
 }
 
